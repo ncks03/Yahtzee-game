@@ -3,8 +3,7 @@ import random
 # Variables
 player_throw = []
 comp_throw = []
-player_stats = {}
-computer_stats = {
+player_stats = {
     "1":0,
     "2":0,
     "3":0,
@@ -13,6 +12,7 @@ computer_stats = {
     "6":0,
     "three_of_a_kind":0,
     "four_of_a_kind":0,
+    "full_house":0,
     "small_street":0,
     "large_street":0,
     "yahtzee":0,
@@ -24,13 +24,6 @@ player_totals = {
     "bottom":0,
     "total":0
 }
-computer_totals = {
-    "top":0,
-    "bonus":0,
-    "bottom":0,
-    "total":0
-}
-is_player_turn = True
 
 def throw_dice():
     return random.randrange(1, 7)
@@ -43,22 +36,45 @@ def throw(n = 5):
     return values
 
 def player_turn():
-    # Throw dices
+    # Print current stats
+    current_stats = []
+
+    for entry in player_stats.values():
+        current_stats.append(entry)
+    
+    print(f"Current scores:\n"
+          f"{"Ones:":<20}{current_stats[0]:<10}\n"
+          f"{"Twos:":<20}{current_stats[0]:<10}\n"
+          f"{"Threes:":<20}{current_stats[0]:<10}\n"
+          f"{"Fours:":<20}{current_stats[0]:<10}\n"
+          f"{"Fives:":<20}{current_stats[0]:<10}\n"
+          f"{"Sixes:":<20}{current_stats[0]:<10}\n"
+          f"{"Three of a kind:":<20}{current_stats[0]:<10}\n"
+          f"{"Four of a kind:":<20}{current_stats[0]:<10}\n"
+          f"{"Full house:":<20}{current_stats[0]:<10}\n"
+          f"{"Small street:":<20}{current_stats[0]:<10}\n"
+          f"{"Large street:":<20}{current_stats[0]:<10}\n"
+          f"{"Yahtzee:":<20}{current_stats[0]:<10}\n"
+          f"{"Chance:":<20}{current_stats[0]:<10}\n")
+    
+    # first turn
     score = throw()
     print(f"Your throw: {score}")
 
     # Determine which score types can be saved
 
+
     # Player chooses option
     player_choice = input(f"What do you want to do?")
     
-    # Throw remaining dices
+    # second turn
+
+    # third turn
 
 
 def play():
     while True:
-        if is_player_turn:
-            player_turn()
+        player_turn()
 
 if __name__ == "__main__":
     play()
