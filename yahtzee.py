@@ -79,7 +79,18 @@ def player_turn():
 
     for number in score:
         possible_options.add(str(number))
-        if 
+        if score.count(number) == 3:
+            possible_options.add("3 of a kind")
+        elif score.count(number) == 4:
+            possible_options.add("4 of a kind")
+        elif score.count(number) == 5:
+            possible_options.add("yahtzee")
+    
+    score = [1,2,3,4,2]
+    if [1,2,3,4] in score or [2,3,4,5] in score:
+        possible_options.add("small straight")
+    elif score == [1,2,3,4,5] or score == [2,3,4,5,6]:
+        possible_options.add("large straight")
     
     # Player chooses option
     print(f"You can choose from: {", ".join(possible_options)}")
