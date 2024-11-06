@@ -13,8 +13,8 @@ player_stats = {
     "three_of_a_kind":0,
     "four_of_a_kind":0,
     "full_house":0,
-    "small_street":0,
-    "large_street":0,
+    "small_straight":0,
+    "large_straight":0,
     "yahtzee":0,
     "chance":0,
 }
@@ -46,6 +46,7 @@ def player_turn():
     current_stats = []
     turn_score = 0
 
+    # Append current stats to list
     for entry in player_stats.values():
         if entry == 0:
             current_stats.append("")
@@ -64,8 +65,8 @@ def player_turn():
           f"{"Three of a kind:":<20}|{current_stats[6]:<2}|\n"
           f"{"Four of a kind:":<20}|{current_stats[7]:<2}|\n"
           f"{"Full house:":<20}|{current_stats[8]:<2}|\n"
-          f"{"Small street:":<20}|{current_stats[9]:<2}|\n"
-          f"{"Large street:":<20}|{current_stats[10]:<2}|\n"
+          f"{"Small straight:":<20}|{current_stats[9]:<2}|\n"
+          f"{"Large straight:":<20}|{current_stats[10]:<2}|\n"
           f"{"Yahtzee:":<20}|{current_stats[11]:<2}|\n"
           f"{"Chance:":<20}|{current_stats[12]:<2}|\n")
     
@@ -78,6 +79,7 @@ def player_turn():
 
     for number in score:
         possible_options.add(str(number))
+        if 
     
     # Player chooses option
     print(f"You can choose from: {", ".join(possible_options)}")
