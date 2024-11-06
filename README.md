@@ -8,15 +8,16 @@ I'm building this app to help me with learning to code. Therefore the code will 
 
 The purpose of the game is to get the highest score. Each turn you get 3 throws. Each throw you throw 5 dices and can choose which dices you want to keep. Then you throw the remaining dices. After the 3rd throw you can choose where you want to put your score:
 
-    Numbers: All instances of a number (1-6) in your throw added together (For example when you have 3 sixes the score for sixes will be 18.)
-
-    3 of a kind: Total of all values, when you have at least 3 of the same number
-    4 of a kind: Total of all values, when you have at least 4 of the same number
-    Full House: 25 points, when you have 3 of one number and 2 of another number
-    Small straight: 30 points, when you have 4 consecutive numbers (i.e. 1-4, 2-5 or 3-6)
-    Large straight: 40 points, when you have 5 consecutive numbers (i.e. 1-5 or 2-6)
-    Yahtzee: First time 50 points, then 100. When all 5 values are the same
-    Chance: Total of all values.
+| Field | Points | Requires |
+|---|---|---|
+| Numbers (1-6) | All instances of the number added together | At least 1 instance of the number |
+| 3 of a kind | Total of all values | 3 or more of the same number |
+| 4 of a kind | Total of all values | 4 or more of the same number |
+| Full house | 25 | 3 of one number and 2 of another |
+| Small straight | 30 | 4 consecutive numbers (1-4, 2-5 or 3-6) |
+| Large straight | 40 | 5 consecutive numbers (1-5 or 2-6) |
+| Yahtzee | First time 50, then 100 | All 5 values are the same |
+| Chance | Total of all values | Can be any combination of values |
 
 Once a score field has been filled, it can't be changed.
 
