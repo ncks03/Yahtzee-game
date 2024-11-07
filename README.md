@@ -2,8 +2,6 @@
 
 This is an application where you can play the single player dice game Yahtzee!
 
-I'm building this app to help me with learning to code. Therefore the code will probably not be flawless and contain lots of errors.
-
 # The game
 
 The purpose of the game is to get the highest score. Each turn you get 3 throws. Each throw you throw 5 dices and can choose which dices you want to keep. Then you throw the remaining dices. After the 3rd throw you can choose where you want to put your score:
